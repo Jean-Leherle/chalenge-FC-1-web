@@ -14,11 +14,23 @@ body {
   text-align: center;
   text-decoration: underline;
   background-color: orange;
+  font-weight: bold;
   }
   section {
-    border: 1px solid black;
     padding: 0.5rem;
     margin: 1rem 0.5rem;
+  }
+
+  form{
+    position: relative;
+    border: 1px solid grey;
+    padding: 0.7rem;
+  }
+  form p{
+    position: absolute;
+    top : -0.7rem;
+    background-color: white;
+    padding: 0.1rem;
   }
   select{
     background-color: #EFEFEF;
@@ -26,10 +38,12 @@ body {
 
   nav{
     width: fit-content;
+    margin: 0 auto;
   }
   nav p { 
     background-color: #ddd;
     text-align: center;
+    border: 2px solid black;
   }
   nav ul{
     background-color: #808080;
@@ -50,9 +64,23 @@ body {
   }
   nav ul li a:hover {
     color: #90ee90;
+    text-decoration: underline;
   }
   footer {
-    background-color: #EFEFEF;
+    border-top: 2px solid black;
+    background-color: #808080;
     text-align: center;
     padding: 1rem;
+  }
+
+  @media only screen and (min-width : 1024px){
+    nav{
+      border: 2px solid black;
+    }
+    nav p {
+      display: none;
+    }
+    nav ul{
+      flex-direction: row;
+    }
   }
